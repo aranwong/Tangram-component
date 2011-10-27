@@ -148,9 +148,9 @@ baidu.ui.Slider = baidu.ui.createUI(function(options){
             range           : [0, 0, 0, 0]
         };
         me._updateDragRange();
-        drag = baidu.dom.draggable(me.getThumb(), me._dragOpt);
+        me._drag = baidu.dom.draggable(me.getThumb(), me._dragOpt);
         me.addEventListener('dispose', function(){
-            drag.cancel();
+            me._drag.cancel();
         });
     },
 
